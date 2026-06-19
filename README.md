@@ -59,12 +59,13 @@
 
 ### 다른 학교·학과에 적용하기
 
-`index.html` 상단의 `SEEDS` 객체에서 교수 이름 목록을 바꾸면 됩니다(영문명 권장, 매칭 정확도 향상):
+`index.html` 상단의 `SEEDS` 객체에서 연구자 이름 목록을 바꾸면 됩니다(영문명 권장, 매칭 정확도 향상). 아래는 형식을 보여주기 위한 **예시적(illustrative) 가명**이며, 실제 사용 시 분석 대상 연구자 이름으로 교체하세요.
 
 ```js
+// 아래 이름은 예시적(가명)입니다 — 실제 연구자 이름으로 교체하세요.
 const SEEDS = {
-  urban:  ["Young-Sung Lee", "Kyung-Min Kim", "Saehoon Kim", "Soo-eun Chang"],
-  social: ["In-Kwon Park", "Kyung-Min Kim"]
+  urban:  ["Researcher A", "Researcher B", "Researcher C"],
+  social: ["Researcher D", "Researcher E"]
 };
 ```
 
