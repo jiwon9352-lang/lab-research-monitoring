@@ -163,7 +163,7 @@
 </div>
 
 <script>
-const MAILTO = "mailto=jiwon9352@gmail.com";
+const MAILTO = ""; // (선택) OpenAlex polite-pool 이메일. 공개 배포 시 비워둠. 사용 시 예: "mailto=you@example.com"
 const API = "https://api.openalex.org";
 const NOW = new Date().getFullYear();
 
@@ -190,8 +190,8 @@ document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
 $("#seeds").value = SEEDS.urban.join(", ");
 
 async function jget(url){
-  const sep = url.includes("?") ? "&" : "?";
-  const r = await fetch(url + sep + MAILTO, {headers:{"Accept":"application/json"}});
+  const q = MAILTO ? (url.includes("?") ? "&" : "?") + MAILTO : "";
+  const r = await fetch(url + q, {headers:{"Accept":"application/json"}});
   if(!r.ok) throw new Error("API "+r.status);
   return r.json();
 }
